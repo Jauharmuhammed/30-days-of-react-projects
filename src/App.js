@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import {Routes, Route} from 'react-router-dom'
+import {Home, RandomColorGrid, NumberGenerator, BasicForm, RandomColorStripes, RandomColor} from './pages/index'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Routes>
+      <Route exact path="/" element={<Home/>} />
+      <Route path="/random-color" element={<RandomColor/>} />
+      <Route path="/random-colors" element={<RandomColorStripes/>} />
+      <Route path="/number-generator" element={<NumberGenerator/>} />
+      <Route path="/basic-form" element={<BasicForm/>} />
+      <Route path="/random-color-grid" element={<RandomColorGrid/>} />
+    </Routes>
+    </>
   );
 }
 
