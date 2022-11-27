@@ -6,11 +6,11 @@ function App() {
     <>
     <Routes>
       <Route exact path="/" element={<Home/>} />
-      <Route path="/random-color" element={<RandomColor/>} />
-      <Route path="/random-colors" element={<RandomColorStripes/>} />
-      <Route path="/number-generator" element={<NumberGenerator/>} />
-      <Route path="/basic-form" element={<BasicForm/>} />
-      <Route path="/random-color-grid" element={<RandomColorGrid/>} />
+      <Route path="random-color" element={<RandomColor/>} />
+      <Route path="random-colors" element={<RandomColorStripes/>} />
+      <Route path="number-generator" element={<NumberGenerator/>} />
+      <Route path="basic-form" element={<BasicForm/>} />
+      <Route path="random-color-grid" element={<RandomColorGrid/>} />
     </Routes>
     </>
   );
