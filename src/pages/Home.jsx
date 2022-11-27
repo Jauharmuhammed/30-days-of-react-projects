@@ -43,15 +43,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* <ul>
-        {links?.map((link) => (
-          <li key={link.url} >
-            <Link to={link.url}>
-              {link.name}
-            </Link>
-          </li>
-        ))}
-      </ul> */
-}

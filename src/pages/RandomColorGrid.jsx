@@ -2,6 +2,8 @@ import React from "react";
 import ReloadButton from "../components/ReloadButton";
 import Tooltip from "../components/Tooltip";
 import { hexaColor } from "../utils/randomColor";
+import toast, { Toaster } from "react-hot-toast";
+import { IoCopyOutline } from "react-icons/io5";
 
 const RandomColorGrid = () => {
   const RandomColorBox = () => {
@@ -11,6 +13,7 @@ const RandomColorGrid = () => {
       position: "relative",
       aspectRatio: "1/1",
       height: "auto",
+      cursor: "pointer",
     };
 
     const contentStyle = {
@@ -20,8 +23,20 @@ const RandomColorGrid = () => {
       transform: "translate(-50%, -50%)",
     };
 
+    const handleClick = () => {
+      navigator.clipboard.writeText(randomColor);
+      toast("Copied to clipboard", {
+        icon: <IoCopyOutline />,
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    };
+
     return (
-      <div style={boxStyle}>
+      <div style={boxStyle} onClick={handleClick}>
         <p style={contentStyle}>{randomColor}</p>
       </div>
     );
@@ -42,8 +57,9 @@ const RandomColorGrid = () => {
           <RandomColorBox key={i} />
         ))}
         <Tooltip title="This is a random color Generator using haxadecimal values" />
+        <Toaster/>
       </div>
-      <ReloadButton/>
+      <ReloadButton />
     </>
   );
 };

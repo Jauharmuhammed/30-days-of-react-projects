@@ -6,7 +6,6 @@ const Tooltip = ({ title }) => {
       <span className="tooltip">?
         <span className="tooltiptext">{title}</span>
       </span>
-
     </div>
   );
 };
