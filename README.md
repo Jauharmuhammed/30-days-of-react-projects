@@ -87,7 +87,7 @@ Before downloading the project, check to make sure you meet the [project's requi
 Clone the project. This will download the GitHub respository files onto your local machine.
 
 ```Shell
-git clone https://github.com/Jauharmuhammed/redux-toolkit-post
+git clone https://github.com/Jauharmuhammed/30-days-of-react-projects
 ```
 
 ### Frontend Instructions (Create React App) :
